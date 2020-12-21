@@ -1,0 +1,806 @@
+/* 
+Main Colors
+light blue : #74ADEB
+crimson red : #DE3232
+*/
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 
+change the body font 
+*/
+body,
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+/* 
+body {
+    padding: 14px;
+} */
+
+/*
+Universal Spacing
+*/
+.space {
+    margin-top: 30px;
+}
+
+/*
+adjusting the height of the header text
+[H1] using the padding of the parent element
+[intro-text] padding-top: 250px;
+*/
+.intro-text {
+    position: relative;
+    padding-top: 220px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 200px;
+}
+
+.intro-text H1 {
+    font-size: 5rem;
+    color: #eeeeee;
+    font-weight: 600;
+    font-family: Pirulen;
+}
+
+.intro-text p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #eeeeee;
+    font-size: 2rem;
+}
+
+/* 
+change the header hero image 
+*/
+header {
+    background: url(../img/header-bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    background-position: top;
+    color: #cfcfcf;
+    position: relative;
+    height: 100%;
+    /* cursor: default; */
+}
+
+/* chnaging the direction of the Clip-path in arabic or english main page */
+.clipBottom-ltr {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+}
+
+.clipBottom-rtl {
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+}
+
+/* 
+change the main color of the
+entire style [.color] 
+*/
+.color {
+    color: #DE3232;
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-color: #fff;
+}
+
+.intro-text>h1>.mE {
+    text-decoration: underline;
+    text-decoration-color: #DE3232;
+}
+
+.title_ar {
+    font-family: Hacen Beirut, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+._ar {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    direction: rtl;
+}
+
+.title_ar p {
+    font-family: GE SS Two Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+._ar-red {
+    color: #DE3232;
+    font-weight: 550;
+
+}
+
+.de-space {
+    font-size: 0.5rem;
+}
+
+._ar-white {
+    color: #fff;
+    font-weight: 550;
+}
+
+/* 
+for Screens bigger than 768px
+Hero Page font-sizes increase 
+*/
+@media (min-width: 768px) {
+    .intro-text p {
+        font-size: 3rem;
+        transition: font-size 0.3s ease;
+    }
+
+    .intro-text H1 {
+        font-size: 6rem;
+        transition: font-size 0.3s ease;
+    }
+}
+
+/* 
+for Screens smaller than 375px
+Hero Page font-sizes decrease 
+*/
+@media (max-width: 375px) {
+    .intro-text p {
+        font-size: 1.6rem;
+        transition: font-size 0.3s ease;
+    }
+
+    .intro-text H1 {
+        font-size: 4rem;
+        transition: font-size 0.3s ease;
+    }
+}
+
+/* 
+Hero Text Animations 
+*/
+.intro-text>h1:first-child {
+    animation: moveInLeft 1.35s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        /* we can use [REM] to connect it to the [root font-size] */
+        /* transform: translateX(-100px); */
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        /* we can use [REM] to connect it to the [root font-size] */
+        /* transform: translateX(16px); */
+        transform: translateX(1.6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro-text>p {
+    animation: moveInRight 1.35s ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        /* we can use [REM] to connect it to the [root font-size] */
+        /* transform: translateX(100px); */
+        transform: translateX(10rem);
+    }
+
+    80% {
+        /* we can use [REM] to connect it to the [root font-size] */
+        /* transform: translateX(-20px); */
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        /* we can use [REM] to connect it to the [root font-size] */
+        /* transform: translateY(35px); */
+        transform: translateY(3.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== */
+/* Navbar toggle button styles */
+/* ==================== */
+
+
+.navbar-toggle {
+    border-radius: 6px;
+}
+
+.navbar-default .navbar-toggle:hover>.icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #74ADEB;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #74ADEB;
+}
+
+/* ==================== */
+
+
+/* 
+changed from [padding: 15px 15px;]
+for [.navbar-brand] 
+*/
+.navbar-brand {
+    position: relative;
+    padding: 5px 5px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navbar-brand-lang {
+    position: relative;
+    padding: 5px 5px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* 
+sizing the company [svg] logo 
+*/
+.white-logo-mesc {
+    display: block;
+    position: absolute;
+    width: 7rem;
+}
+
+/* sizing the Language [svg] Icon */
+._lang {
+    display: block;
+    position: absolute;
+    left: 8rem;
+    top: 2.21rem;
+    width: 3rem;
+}
+
+/* 
+changing the color of the hamburger
+button [.open > .dropdown-toggle.btn-success] 
+*/
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #74adeb;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #74adeb;
+    border-color: #74adeb;
+    transition: background-color 0.3s ease;
+}
+
+
+/* 
+change main button color & hover effect
+[.btn-default] 
+*/
+.btn-default {
+    color: #94c8ff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: transparent;
+    border: 1px solid #74adeb;
+    border-radius: 10px;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: all 0.5s;
+
+    animation: moveInBottom .5s ease-out .6s;
+    animation-fill-mode: backwards;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active {
+    background-image: linear-gradient(to bottom left, #74ADEB, #324c68);
+    background-color: #74ADEB;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+._btn-hello {
+    width: 12rem;
+    height: 4.2rem;
+    font-size: 1.4rem;
+}
+
+/* ._btn-hello:hover,
+._btn-hello:focus,
+._btn-hello:active {
+
+} */
+
+
+/* ================================== */
+
+/* 
+change all the [hr] elements
+[line seperators 
+*/
+hr {
+    height: 2px;
+    width: 60px;
+    background: #74adeb;
+    position: relative;
+    border: 0;
+    margin: 30px 0 0 0;
+}
+
+
+/* 
+Border Hover Animation 
+*/
+/* ================================== */
+
+/* ================================== */
+
+
+/* 
+change list items [li] hover background-color
+in the navbar 
+*/
+#menu.navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+    color: #bbbbbb;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* #menu.navbar-default .navbar-nav>li>a:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-color: #fff;
+    border-width: 10px;
+} */
+
+#menu.navbar-default .navbar-nav>li>a:hover,
+#menu.navbar-default .navbar-nav>li>a:active {
+    background-color: rgba(116, 174, 235, 0.2);
+    color: #EBAD74;
+}
+
+#menu.navbar-default .navbar-nav>li>a {
+    transition-delay: 0.08s;
+}
+
+/* ================================== */
+
+
+/* 
+other nav colors 
+*/
+#menu a.navbar-brand i.fa {
+    color: #385a80;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #74adeb !important;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #74adeb;
+    border-color: #74adeb;
+}
+
+/* 
+to fill the triangle at the lower left border of the Hero Poster
+*/
+._filler {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    top: 75%;
+    background-color: #F6F6F6;
+    z-index: -1;
+}
+
+/* 
+About Section colors 
+*/
+#about-section {
+    padding: 100px 0;
+    background-color: #f6f6f6;
+}
+
+#about-section h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.about-ar h2 {
+    text-align: right;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.about-ar hr {
+    float: right;
+}
+
+#about-section h4 {
+    border-bottom: 1px solid #1350f8;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+#about-section p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#about-section .animation-container img {
+    width: 25%;
+}
+
+#about-section .animation-container {
+    display: block;
+    background-image: linear-gradient(to right, #003B62, #006AB1);
+    height: 15%;
+    width: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+#about-section .animation-container span:nth-child(1) {
+    position: absolute;
+    height: 100%;
+    width: 1vw;
+    background: white;
+    left: 50%;
+    transform: skew(-25deg);
+}
+
+#about-section .animation-container span:nth-child(2) {
+    position: absolute;
+    height: 100%;
+    width: 1vw;
+    background: white;
+    left: 40%;
+    transform: skew(-25deg);
+    animation: spanshift-left 8s ease-out infinite;
+}
+
+#about-section .animation-container span:nth-child(3) {
+    position: absolute;
+    height: 100%;
+    width: 1vw;
+    background: white;
+    left: 60%;
+    transform: skew(-25deg);
+    animation: spanshift-right 12s ease-out infinite;
+}
+
+@keyframes spanshift-left {
+
+    0%,
+    100% {
+        transform: translateX(0), skew(25deg);
+    }
+
+    50% {
+        transform: translateX(-75px);
+    }
+}
+
+@keyframes spanshift-right {
+
+    0%,
+    100% {
+        transform: translateX(0), skew(60deg);
+    }
+
+    50% {
+        transform: translateX(95px);
+    }
+}
+
+/* 
+RTL Text Align for Arabic Text in About Section 
+*/
+body>#about-section>.container>.row>._ar {
+    text-align: right;
+}
+
+/* 
+Team Section colors 
+*/
+#team-section {
+    padding: 100px 0;
+    background-color: #f6f6f6;
+}
+
+#team-section h3 {
+    border-top: 1px solid #74adeb;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+/* 
+Services Section colors 
+*/
+
+.service p {
+    line-height: 30px;
+}
+
+.service h4 {
+    line-height: 50px;
+}
+
+.service i.fa {
+    line-height: 85px;
+}
+
+#services-section h2 {
+    border-bottom: 1px solid #74adeb;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+#services-section i.fa {
+    font-size: 36px;
+    margin-right: 20px;
+    color: #DE3232;
+    padding-bottom: 10px;
+    display: block;
+}
+
+#services-section ._ar {
+    text-align: right;
+}
+
+.services-arabic h2 {
+    text-align: right;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.services-arabic p {
+    text-align: right;
+    font-family: inherit;
+}
+
+.services-arabic hr {
+    float: right;
+}
+
+.ship__supply p {
+    margin-right: 20px;
+}
+
+/* #services-section img {
+    position: absolute;
+    width: 15vw;
+    right: 15vw;
+} */
+
+#contact-section img {
+    position: relative;
+    width: 15vw;
+    min-width: 100px;
+    margin-bottom: 30px;
+}
+
+/* 
+trying to hide the services stack resize malformation [in between sizes] 
+*/
+@media (min-width: 768px) {
+    .col-sm-6 {
+        width: 48%;
+    }
+}
+
+/* 
+Portfolio Gallery Section colors 
+*/
+#works-section {
+    padding: 100px 0;
+    background-color: #222222;
+}
+
+.works-arabic {
+    text-align: right;
+}
+
+.works-arabic hr {
+    float: right;
+}
+
+#works-section ._ar {
+    text-align: right;
+}
+
+ol.type li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 2rem;
+}
+
+ol.type li a {
+    color: #bbbbbb;
+    transition: all 0.3s ease 0.1s;
+}
+
+/*
+color: #2d6fb6;
+border-bottom: 1px solid #79baff;
+ */
+ol.type li a.active {
+    color: #ee7f7f;
+    border-bottom: 1px solid #DE3232;
+    padding-bottom: 8px;
+}
+
+/*
+color: #3f87d3;
+ */
+ol.type li a:hover {
+    color: #74adeb;
+    border-bottom: 1px solid #74adeb;
+    padding-bottom: 8px;
+}
+
+
+/* Team Section */
+.team-arabic {
+    text-align: right;
+}
+
+.team-arabic hr {
+    float: right;
+}
+
+
+/* 
+Contact Section colors
+*/
+#contact-section {
+    padding: 100px 0;
+    background-color: #222222;
+}
+
+#contact-section i.fa {
+    color: #74adeb;
+    margin-left: 20px;
+}
+
+#contact-section i.nudge {
+    margin-right: 20px;
+}
+
+#contact-section .btn {
+    background: transparent;
+    border: 1px solid #74adeb;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #74adeb;
+    font-size: 16px;
+}
+
+#contact-section .btn:hover,
+#contact-section .btn:focus {
+    background: #74adeb;
+    color: #DE3232;
+}
+
+#social-section .social i.fa {
+    font-size: 24px;
+    padding: 4px 5px;
+    color: #74adeb;
+    transition: all 0.5s;
+}
+
+#contact-section .text-danger {
+    color: #ee7f7f;
+    text-align: left;
+}
+
+#contact-section .container {
+    transition: all 0.3s ease;
+}
+
+#contact-section h2.ar {
+    text-align: right;
+}
+
+#contact-section .section-title hr {
+    text-align: right;
+}
+
+.help-block {
+    text-align: right;
+}
+
+/* 
+Footer colors 
+*/
+#footer {
+    background-color: #DE3232;
+    color: #777;
+    padding: 15px 0 10px 0;
+}
+
+#footer a:hover,
+#footer a:focus {
+    text-decoration: none;
+    color: #74adeb;
+}
+
+#footer>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+}
+
+._cr {
+    text-align: center;
+    grid-column: 2;
+}
+
+#mAnimate {
+    place-self: center;
+    height: 30px;
+    grid-column: 1;
+}
+
+.gotoTop {
+    position: fixed;
+    z-index: 55;
+    right: 30px;
+    bottom: 30px;
+}
+
+.gotoTop img {
+    width: 60px;
+    cursor: pointer;
+}
