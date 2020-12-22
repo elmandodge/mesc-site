@@ -27,14 +27,6 @@ html {
     cursor: default;
 }
 
-body {
-         scroll-snap-type: y proximity;
-}
-
-.scroll-snap {
- scroll-snap-align: start;   
-}
-
 /* 
 body {
     padding: 14px;
