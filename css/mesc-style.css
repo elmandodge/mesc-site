@@ -25,6 +25,11 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
     cursor: default;
+     scroll-snap-type: y proximity;
+}
+
+.scroll-snap {
+ scroll-snap-align: start;   
 }
 
 /* 
